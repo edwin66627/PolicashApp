@@ -1,0 +1,43 @@
+<ion-content class="ion-text-center" color="dark">
+  <app-header></app-header>
+  <form (ngSubmit)="login()">
+    <ion-grid color="dark">
+      <ion-row>
+        <ion-col class="ion-padding">
+          <ion-list>
+            <ion-item color="dark">
+              <ion-select placeholder="Tipo Identificación" [(ngModel)]="user.tipoId"
+                [ngModelOptions]="{standalone: true}" required>
+                <ion-select-option value="CC">Cedula de ciudadania</ion-select-option>
+                <ion-select-option value="CE">Cedula de extranjería</ion-select-option>
+                <ion-select-option value="PS">Pasaporte</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-no-padding">
+          <ion-input placeholder="Numero Identificacion" [(ngModel)]="user.identificacion"
+            [ngModelOptions]="{standalone: true}" required></ion-input>
+          <ion-input placeholder="Password" type="password" [(ngModel)]="user.contrasena"
+            [ngModelOptions]="{standalone: true}" required></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="ion-padding">
+          <ion-button shape="round" fill="outline" type="submit">Ingresar</ion-button>
+          <br />
+          <br />
+
+          <a href="#">Olvido contraseña</a>
+          <br />
+          <br />
+          <a routerLink="/registrar">Registrarse</a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  <app-footer></app-footer>
+</ion-content>

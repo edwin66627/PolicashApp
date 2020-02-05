@@ -1,0 +1,23 @@
+<ion-content class="ion-text-center" color="dark">
+  <app-header></app-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-padding">
+        <div>
+          <ion-input [(ngModel)]="monto" placeholder="Monto a ahorrar"></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-padding">
+        <ion-button shape="round" fill="outline" (click)="registrarMov()">
+          Ahorrar</ion-button>
+        <br />
+        <br />
+
+        <ion-back-button color="tertiary" defaultHref="/principal">Regresar</ion-back-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-footer></app-footer>
+</ion-content>

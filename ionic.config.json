@@ -1,0 +1,7 @@
+{
+  "name": "PoliCashApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

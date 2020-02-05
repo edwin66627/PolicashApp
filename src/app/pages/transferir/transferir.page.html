@@ -1,0 +1,17 @@
+<ion-content class="ion-text-center" color="dark">
+  <app-header></app-header>
+  <p align="center">Transferencias</p>
+  <ion-item color="dark">
+    <ion-label position="floating">Monto a Transferir</ion-label>
+    <ion-input [(ngModel)]="movimiento.valorMovimiento"></ion-input>
+  </ion-item>
+  <ion-item color="dark">
+    <ion-label position="floating">Cuenta a Transferir</ion-label>
+    <ion-input [(ngModel)]="cuentaDestino"></ion-input>
+  </ion-item>
+  <ion-button (click)="transferir()" color="success" expand="block">Transferir
+  </ion-button>
+  <ion-back-button color="tertiary" defaultHref="/principal"></ion-back-button>
+  <!--<ion-button expand="block">Regresar</ion-button>-->
+  <app-footer></app-footer>
+</ion-content>

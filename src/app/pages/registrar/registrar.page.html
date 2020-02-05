@@ -1,0 +1,65 @@
+<ion-content class="ion-text-center" color="dark">
+  <app-header></app-header>
+  <ion-grid>
+    <p> Ingrese sus datos!</p>
+    <ion-row>
+      <ion-col>
+        <form (ngSubmit)="signUp()">
+          <ion-list>
+            <ion-item color="dark">
+              <ion-select placeholder="Tipo de identificacion" [(ngModel)]="user.tipoId"
+                [ngModelOptions]="{standalone: true}">
+                <ion-select-option value="CC">Cedula de Ciudadania</ion-select-option>
+                <ion-select-option value="CE">Cedula de Extranjeria</ion-select-option>
+                <ion-select-option value="PS">Pasaporte</ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-item color="dark">
+              <ion-input placeholder="Numero Identificacion" type="number" name="id" clealInput="true" required
+                [(ngModel)]="user.identificacion">
+              </ion-input>
+            </ion-item>
+
+            <ion-item color="dark">
+              <ion-input placeholder="Nombre" type="text" name="nombre" clealInput="true" required
+                [(ngModel)]="user.nombres"></ion-input>
+            </ion-item>
+
+            <ion-item color="dark">
+              <ion-input placeholder="Apellidos" type="text" name="apellido" clealInput="true" required
+                [(ngModel)]="user.apellidos"></ion-input>
+            </ion-item>
+
+            <ion-item color="dark">
+              <ion-input placeholder="Celular" type="number" name="celular" clealInput="true" required
+                [(ngModel)]="user.celular"></ion-input>
+            </ion-item>
+
+            <ion-item color="dark">
+              <ion-input placeholder="Email" type="email" name="correo" clealInput="true" required
+                [(ngModel)]="user.correo">
+              </ion-input>
+            </ion-item>
+
+            <ion-item color="dark">
+              <ion-input placeholder="Password" type="password" name="contraseña" clealInput="true" required
+                [(ngModel)]="user.contrasena">
+              </ion-input>
+            </ion-item>
+
+          </ion-list>
+
+
+          <ion-button type="submit" class="button button-large button-positive">
+            <ion-icon name="send"></ion-icon>
+            Crear Cuenta
+          </ion-button>
+        </form>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
